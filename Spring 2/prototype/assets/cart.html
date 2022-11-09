@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+<!--    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">-->
+<!--    <link rel="stylesheet" href="style.css">-->
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="menu d-lg-block d-none">
+                <div class="row align-items-center">
+                    <div class="col-lg-2">
+                        <div class="img-wrap">
+                            <img src="https://source.unsplash.com/random/1" alt="" class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <ul class="list p-0 m-0">
+                            <li class="items">
+                                <a href="#">
+                                    Danh mục sách
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Văn học Việt Nam</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Văn học nước ngoài</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Thiếu nhi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Thời sự - Chính trị</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="items">
+                                <a href="#">
+                                    Sách bán chạy
+                                </a>
+                            </li>
+                            <li class="items">
+                                <a href="#">
+                                    Chương trình khuyến mãi
+                                </a>
+                            </li>
+                            <li class="items">
+                                <a href="#">
+                                    Giảm giá đặc biệt
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="list-control p-0 m-0">
+                            <li class="items-control has-input">
+                                <div class="input-group">
+                                    <div class="input-group">
+                                        <a href="#"><i class="bi bi-search"></i></a>
+                                        <input class="form-control mr-2" type="search" placeholder="Search"
+                                            aria-label="Search">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="items-control">
+                                <a href="#">
+                                    <i class="bi bi-bag"></i>
+                                </a>
+                            </li>
+                            <li class="items-control">
+                                <a href="#">
+                                    <i class="bi bi-person"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<!--    <section class="corf my-5">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-8">-->
+<!--                    <h4>Giỏ hàng của bạn</h4>-->
+<!--                    <div class="product py-3">-->
+<!--                        <div class="d-flex">-->
+<!--                            <div class="title">-->
+<!--                                <table class="table">-->
+<!--                                    <thead>-->
+<!--                                    <th colspan="2">Tên sách</th>-->
+<!--                                    <th>Số lượng</th>-->
+<!--                                    <th>Giá</th>-->
+<!--                                    <th>Thành tiền</th>-->
+<!--                                    <th></th>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    <td>-->
+<!--                                        <a href="#" >-->
+<!--                                            <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8935236425834.jpg" alt="" class="pic-cart">-->
+<!--                                        </a>-->
+<!--                                    </td>-->
+<!--                                    <td>Đời Thừa - Danh Tác Văn Học Việt Nam</td>-->
+<!--&lt;!&ndash;                                    <td>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <form id='myform' method='POST' class='quantity' action='#'>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <input type='button' value='-' class='qtyminus minus' field='quantity' />&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <input type='text' name='quantity' value='0' class='qty' />&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <input type='button' value='+' class='qtyplus plus' field='quantity' />&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </form>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </td>&ndash;&gt;-->
+<!--                                    <td class="quantity-cart">-->
+<!--                                        <div class="quantity">-->
+<!--                                            <div class="pro-qty">-->
+<!--                                                <input type="text" value="1">-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </td>-->
+<!--                                    <td>152000</td>-->
+<!--                                    <td>152000</td>-->
+<!--                                    <td>-->
+<!--                                        <button class="btn btn-danger">Xóa</button>-->
+<!--                                    </td>-->
+<!--                                    </tbody>-->
+<!--                                </table>-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="col-lg-4">-->
+<!--                    <div class="bgr">-->
+<!--                        <div class="method d-flex justify-content-between">-->
+<!--                            <p>Giao tới</p>-->
+<!--                            <a href="#">Thay đổi</a>-->
+<!--                        </div>-->
+<!--                        <div class="info d-flex justify-content-between">-->
+<!--                            <p class="name">HoangDT</p>-->
+<!--                            <p class="number">0704478128</p>-->
+<!--                        </div>-->
+<!--                        <p class="address">k88/23 Lương Thế Vinh, Sơn Trà, Phước Mỹ, Đà Nẵng</p>-->
+<!--                        <div class="temporary-price d-flex justify-content-between">-->
+<!--                            <span>Tạm tính</span>-->
+<!--                            <p>150000</p>-->
+<!--                        </div>-->
+<!--                        <div class="discount d-flex justify-content-between">-->
+<!--                            <span>Giảm giá</span>-->
+<!--                            <p>0</p>-->
+<!--                        </div>-->
+<!--                        <div class="total d-flex justify-content-between">-->
+<!--                            <span>Tổng cộng</span>-->
+<!--                            <p>150000</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <button class="btn btn-danger">Mua hàng</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!-- Cart Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-light table-borderless table-hover text-center mb-0">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                    <tr>
+                        <td class="align-middle"><img src="img/product-1.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/product-2.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/product-3.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/product-4.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/product-5.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$150</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <form class="mb-30" action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0 p-4" placeholder="Coupon Code">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary">Apply Coupon</button>
+                        </div>
+                    </div>
+                </form>
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Cart Summary</span></h5>
+                <div class="bg-light p-30 mb-5">
+                    <div class="border-bottom pb-2">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h6>Subtotal</h6>
+                            <h6>$150</h6>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-medium">Shipping</h6>
+                            <h6 class="font-weight-medium">$10</h6>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5>Total</h5>
+                            <h5>$160</h5>
+                        </div>
+                        <button class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="end">
+                        <a href="#" class="img-wrap">
+                            <img src="https://source.unsplash.com/random/1" alt="" class="img-fluid">
+                        </a>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi rerum laudantium non minus quae voluptatem, fuga</p>
+                        <ul class="list p-0">
+                            <li class="items">
+                                <a href="#"><i class="bi bi-twitter"></i></a>
+                            </li>
+                            <li class="items">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li class="items">
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Sản Phẩm</h5>
+                    <a href="#">Văn Học Việt Nam</a>
+                    <a href="#">Văn Học Nước Ngoài</a>
+                    <a href="#">Thiếu Nhi</a>
+                    <a href="#">Thời Sự - Chính Trị</a>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Về Hiệu Sách</h5>
+                    <a href="#">Giới thiệu nhà sách</a>
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Chính sách vận chuyển</a>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Liên Hệ</h5>
+                    <a href="#">Email góa ý</a>
+                    <a href="#">18001011</a>
+                    <a href="#">sach@gmail.com</a>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Hỗ Trợ</h5>
+                    <a href="#">Hình thức thanh toán</a>
+                    <a href="#">Hướng dẫn</a>
+                    <a href="#">Thông báo</a>
+                </div>
+            </div>
+            <div class="epilogue">
+                <p>© Copyright 2022, All Rights Reserved by HaiDo</p>
+            </div>
+        </div>
+    </footer>
+
+<!--    <script src="../libs/jquery-3.6.0.min.js"></script>-->
+<!--    <script src="../libs/jquery.animateTyping.js"></script>-->
+<!--    <script src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!--    <script src="main.js"></script>-->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../mail/jqBootstrapValidation.min.js"></script>
+    <script src="../mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

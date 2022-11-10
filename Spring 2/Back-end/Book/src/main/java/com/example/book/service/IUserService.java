@@ -33,4 +33,6 @@ public interface IUserService {
 
     Boolean existsEmail(String email);
 
+    String sendEmail(String username) throws MessagingException, UnsupportedEncodingException;
+
 }

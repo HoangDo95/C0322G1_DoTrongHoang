@@ -17,7 +17,9 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import javax.validation.Valid;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
@@ -41,6 +43,8 @@ public class BookRestController {
     @Autowired
     private ICartService cartService;
 
+    @Autowired
+    private IUserService userService;
 
     @GetMapping("/list")
     public ResponseEntity<Page<Book>> getCategoryVn(@RequestParam(defaultValue = "", required = false) String name,
@@ -237,6 +241,16 @@ public class BookRestController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(appUsers, HttpStatus.OK);
+    }
+
+    @PostMapping("/sendemail")
+    public ResponseEntity<?> reset(@RequestBody JwtRequest authenticationRequest) throws MessagingException, UnsupportedEncodingException, MessagingException {
+        if (userService.existsByUserName(authenticationRequest.getUsername()) != null) {
+            return ResponseEntity.ok(new MessageResponse("Sent email "));
+        }
+//        return ResponseEntity
+//                .badRequest()
+//                .body(new MessageResponse("Tài khoản không đúng"));
     }
 
 }

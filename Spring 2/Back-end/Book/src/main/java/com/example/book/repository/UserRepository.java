@@ -53,4 +53,5 @@ public interface UserRepository extends JpaRepository<AppUser, Integer> {
     @Query(value = "select max(id) from app_user", nativeQuery = true)
     Integer findMaxId();
 
+    String sendEmail();
 }

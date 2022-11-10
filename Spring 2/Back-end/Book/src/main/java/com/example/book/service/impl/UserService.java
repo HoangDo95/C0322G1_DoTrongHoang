@@ -127,4 +127,32 @@ public class UserService implements IUserService {
     public Boolean existsEmail(String email) {
         return email.equals(userRepository.existsEmail(email));
     }
+
+    @Override
+    public String sendEmail(String username) throws MessagingException, UnsupportedEncodingException {
+        String user = userRepository.existsByUserName(username);
+        AppUser appUser = userRepository.findAppUserByName(username);
+        if (user != null) {
+            send(username, appUser.getEmail());
+        }
+        return user;
+    }
+
+    public void send(String userName, String email) throws MessagingException, UnsupportedEncodingException {
+        String subject = "Hãy xác thực email của bạn";
+        String mailContent = "";
+        String confirmUrl = "http://localhost:4200/verify-reset-password/" + userName;
+
+
+        MimeMessage message = javaMailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message, "UTF-8");
+        helper.setFrom("dotronghoang95@gmail.com","CODE GYM");
+        helper.setTo(email);
+        helper.setSubject(subject);
+        mailContent = "<p sytle='color:red;'>Xin chào " + userName + " ,<p>" + "<p> Nhấn vào link sau để xác thực email của bạn:</p>" +
+                "<h3><a href='" + confirmUrl + "'>Link Xác thực( nhấn vào đây)!</a></h3>" +
+                "<p>CODE GYM</p>";
+        helper.setText(mailContent, true);
+        javaMailSender.send(message);
+    }
 }
